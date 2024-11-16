@@ -34,10 +34,7 @@
             text-align: center;
             margin: 10px 0px;;
         }
-        .login_form{
-            /* border:2px solid yellow; */
-           
-        }
+      
         .input-control{
             width: 100%;
             
@@ -73,21 +70,36 @@
             background-color: yellow;
             color: black;
         }
+
+        /* Validation message */
+        .validation_message{
+            font-size: 10px;
+            color: rgb(237, 46, 46);
+            font-weight: 400;
+        }
     </style>
+
+
 </head>
 <body>
     <div class="container">
         <div class="login_container">
             <div class="login_form">
                 <h3 class="login-header">Login</h3>
-                <form>
+               
                     <div class="input-control">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="user">
+                        <div class="validation_message">
+                            <span>Please enter a valid user id</span>
+                        </div>
                     </div>
                     <div class="input-control">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password">
+                        <div class="validation_message">
+                            <span>Please enter a valid password</span>
+                        </div>
                     </div>
                     <div class="information-control">
                         <div class="remember-password">
@@ -97,12 +109,40 @@
                         <div class="forgot-password">Forgot Password</div>
                     </div>
                     <div class="input-control">
-                        <button class="login-btn">Login</button>
+                        <button class="login-btn" onclick="login()">Login</button>
                         <button class="register-btn">Register</button>
                     </div>
-                </form>
+          
             </div>
         </div>
     </div>
+    <script>
+        let user = {username :"admin", password : "admin123"};
+        let validationMessageDiv = document.querySelectorAll('.validation_message');
+        validationMessageDiv.forEach((ele)=>{
+            ele.style.display = 'none';
+        })
+     
+      function login(){
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+
+       if(username == user.username && password == user.password){
+        return alert("login Success");
+      }else{
+        // console.log(username, password);
+        // console.log(validationMessageDiv," validation div");
+        validationMessageDiv.forEach((ele)=>{
+            console.log(ele, "ele list")
+            ele.firstChild.style.display = 'block'
+        })
+        // if(username == user.username){
+        //     validationMessageDiv.forEach(ele=>ele[0].style.display='none');
+        // }else{
+        //     validationMessageDiv.forEach(ele=>ele[0].style.display='block');
+        // }
+      }
+    }
+    </script>
 </body>
 </html>
