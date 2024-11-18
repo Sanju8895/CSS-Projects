@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+*{
+    font-family: "Inter", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(220, 235, 241) ;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:70px;
+    width:100%;
+    background: #2f5a7e;
+}
+.main .header  .right-section,
+.main .header  .left-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 12px
+}
+
+.main .header  .left-section .toggle-bar{
+    color: #fff;
+    margin-left: 20px ;
+    cursor: pointer;;
+}
+
+.main .header  .left-section .brand-logo img{
+    height: 100px;
+    width: 150px;;
+}
+.main .header  .right-section .profile{
+    height:35px;
+    width:35px;
+    border-radius: 50%;
+    background: #8fe25e;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    margin-left:10px;
+    cursor:pointer
+}
+
+.main .header  .right-section .header-menu ul{
+    list-style-type:none ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  
+}
+.main .header  .right-section .header-menu ul li{
+    margin-right: 10px;
+    padding:10px 20px;
+    font-weight: 600;
+    color:#fff;
+    transition: all 0.2s ease;
+}
+.main .header  .right-section .header-menu ul li:hover{
+    background: #fff;
+    color:rgb(26, 23, 23);
+    box-shadow: 0 0 100px rgb(214, 209, 209);
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+.main .center{
+    height: 80vh;
+    width:100%;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.main .center .side-nav{
+    width:20%;
+    background: #8fe25e;
+    padding:20px;
+    margin: 10px 0px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.main .center .center-content{
+    padding:20px;
+}
+
+.main .footer{
+    width: 100%;
+    background-color: rgb(54, 50, 50);
+    text-align: center;
+    padding:22px;
+    color:#fff;
+    font-size: 30px;;
+}

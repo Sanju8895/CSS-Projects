@@ -1,0 +1,79 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:100%;
+    min-height:100%;
+    background: linear-gradient(#cc8989, rgb(125, 233, 125));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+input:focus {
+  outline: none;
+}
+.container{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_container{
+    /* border:2px solid green; */
+    background: rgb(224, 219, 219) ;
+    box-shadow: 0px 0px 10px rgb(196, 195, 195);
+    border-radius:10px ;
+    width:300px;
+    margin: auto;
+    padding:10px;
+    /* margin-top:300px; */
+}
+.login-header{
+    text-align: center;
+    margin: 10px 0px;;
+}
+
+.input-control{
+    width: 100%;
+}
+.input-control > input{
+    width:97.5%;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.information-control{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    opacity: 0.6;
+    align-items: center;
+    margin: 6px 0px;
+}
+.login-btn, .register-btn{
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    border: none;
+    padding: 3px ;
+    cursor: pointer;
+    
+}
+.login-btn{
+    background: linear-gradient(#79d69d, rgb(208, 226, 179));
+    color: black;
+    box-shadow: 0,0, 128px gray;;
+}
+.register-btn{
+    background-color: yellow;
+    color: black;
+}
+
+/* Validation message */
+.validation_message{
+    font-size: 10px;
+    color: rgb(237, 46, 46);
+    font-weight: 400;
+}
